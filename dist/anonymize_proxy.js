@@ -24,7 +24,7 @@ const anonymizeProxy = (options, callback) => {
         }
     }
     const parsedProxyUrl = new url_1.URL(proxyUrl);
-    if (parsedProxyUrl.protocol !== 'http:' && parsedProxyUrl.protocol !== 'socks5:') {
+    if (parsedProxyUrl.protocol !== 'http:' && parsedProxyUrl.protocol !== 'socks:') {
         throw new Error('Invalid "proxyUrl" option: only HTTP proxies are currently supported.');
     }
     // If upstream proxy requires no password, return it directly

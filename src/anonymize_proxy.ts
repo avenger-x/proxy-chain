@@ -38,7 +38,7 @@ export const anonymizeProxy = (
     }
 
     const parsedProxyUrl = new URL(proxyUrl);
-    if (parsedProxyUrl.protocol !== 'http:' && parsedProxyUrl.protocol !== 'socks5:') {
+    if (parsedProxyUrl.protocol !== 'http:' && parsedProxyUrl.protocol !== 'socks:') {
         throw new Error(
             'Invalid "proxyUrl" option: only HTTP proxies are currently supported.',
         );
